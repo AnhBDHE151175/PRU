@@ -16,13 +16,11 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
-    // Start is called before the first frame update
     void Start()
     {
         StartGame();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
