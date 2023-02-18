@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-
-
     public Rigidbody2D rb { get; private set; }
     public Vector2 direction { get; private set; }
 
     public float speed = 30f;
+
+    public float maxBounceAngle = 75f;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,4 +42,28 @@ public class Paddle : MonoBehaviour
         } 
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Ball ball = collision.gameObject.GetComponent<Ball>();
+
+        if(ball != null)
+        {
+            Vector3 paddlePosition = this.transform.position;
+            Vector2 contactPoint = collision.GetContact(0).point;
+
+            float offset = paddlePosition.x - contactPoint.x;
+            float width = collision.otherCollider.bounds.size.x / 2;
+
+            float currentAngle = Vector2.SignedAngle(Vector2.up, ball.rigidBody.velocity);
+            float bounceAngle = (offset / width) * this.maxBounceAngle;
+
+            float newAngle = Mathf.Clamp(currentAngle + bounceAngle, -maxBounceAngle, maxBounceAngle);
+
+            Quaternion rotation = Quaternion.AngleAxis(newAngle, Vector3.forward);
+
+            ball.rigidBody.velocity = rotation * Vector2.up * ball.rigidBody.velocity.magnitude;
+        } 
+    }
+
 }
