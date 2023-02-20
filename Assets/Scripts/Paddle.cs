@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Paddle : MonoBehaviour
 {
     public Rigidbody2D rb { get; private set; }
     public Vector2 direction { get; private set; }
+    AddPointEvent addPointEvent = new AddPointEvent();
 
     public float speed = 30f;
 
@@ -16,7 +18,7 @@ public class Paddle : MonoBehaviour
     }
     void Start()
     {
-
+        EventManager.AddEventInvoker(this);
     }
 
     void Update()
@@ -34,12 +36,14 @@ public class Paddle : MonoBehaviour
             this.direction = Vector2.zero;
         }
     }
+
+
     private void FixedUpdate()
     {
-        if(this.direction != Vector2.zero)
+        if (this.direction != Vector2.zero)
         {
-            this.rb.AddForce(this.direction*this.speed);
-        } 
+            this.rb.AddForce(this.direction * this.speed);
+        }
 
     }
 
@@ -47,7 +51,7 @@ public class Paddle : MonoBehaviour
     {
         Ball ball = collision.gameObject.GetComponent<Ball>();
 
-        if(ball != null)
+        if (ball != null)
         {
             Vector3 paddlePosition = this.transform.position;
             Vector2 contactPoint = collision.GetContact(0).point;
@@ -63,7 +67,13 @@ public class Paddle : MonoBehaviour
             Quaternion rotation = Quaternion.AngleAxis(newAngle, Vector3.forward);
 
             ball.rigidBody.velocity = rotation * Vector2.up * ball.rigidBody.velocity.magnitude;
-        } 
+        }
     }
+
+    public void AddedEventListener(UnityAction<int> listener)
+    {
+        addPointEvent.AddListener(listener);
+    }
+
 
 }

@@ -124,3 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c499c597f47a42bc5598bdc6af33c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 072f6e320209e4c46a3ab2ab38d1d37a, type: 3}
+  - {fileID: 21300000, guid: c24e626f598577c4c93a6d7a2dcacd66, type: 3}
+  - {fileID: 21300000, guid: 574942a7f1d88f042bd58f9b489a1874, type: 3}
+  - {fileID: 21300000, guid: 22c1d173755dfb54996f8893eaaccdd5, type: 3}
+  - {fileID: 21300000, guid: ae2cd0afe6186364d8ab8e3302d8dc22, type: 3}
+  unBreak: 0

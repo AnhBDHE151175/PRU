@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
 
     public Rigidbody2D rigidBody { get; private set; }
 
-    public float speed = 500f;
+    public float speed = 600f;
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -28,5 +28,13 @@ public class Ball : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if(collision.gameObject.name == "Wall")
+        //{
+        //    GameObject.Destroy(this.gameObject);
+        //}
     }
 }

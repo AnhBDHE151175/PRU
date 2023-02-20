@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-
+    const string ScorePrefix = "Score: ";
     public int level = 1;
     public int score = 0;
     public int lives = 3;
@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartGame();
+        EventManager.AddEventListener(AddPoints);
     }
 
     void Update()
@@ -36,5 +37,11 @@ public class GameManager : MonoBehaviour
     {
         this.level = level;
         SceneManager.LoadScene("Level " + level);
+    }
+    public void AddPoints(int points)
+    {
+        Debug.Log("asd");
+        score += points;
+        //scoreText.text = ScorePrefix + score;
     }
 }
