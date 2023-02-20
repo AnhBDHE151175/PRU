@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public static class EventManager
 {
-    static Paddle invoker;
+    static Ball invoker;
     static UnityAction<int> listener;
 
-    public static void AddEventInvoker(Paddle script)
+    public static void AddEventInvoker(Ball script)
     {
         invoker = script;
         if (listener != null)
@@ -26,3 +26,5 @@ public static class EventManager
         }
     }
 }
+
+

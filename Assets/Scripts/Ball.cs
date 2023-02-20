@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ball : MonoBehaviour
 {
 
     public Rigidbody2D rigidBody { get; private set; }
+    AddPointEvent addPointEvent = new AddPointEvent();
 
     public float speed = 600f;
     private void Awake()
@@ -15,6 +17,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         Invoke(nameof(SetRandomTrajectory), 1f);
+        EventManager.AddEventInvoker(this);
     }
 
     private void SetRandomTrajectory()
@@ -27,14 +30,20 @@ public class Ball : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if(collision.gameObject.name == "Wall")
-        //{
-        //    GameObject.Destroy(this.gameObject);
-        //}
+        Brick brick = gameObject.AddComponent<Brick>();
+        if (collision.gameObject.name == "Brick")
+        {
+            addPointEvent.Invoke(brick.pointUnit);
+        }
     }
+    public void AddedEventListener(UnityAction<int> listener)
+    {
+        addPointEvent.AddListener(listener);
+    }
+
 }

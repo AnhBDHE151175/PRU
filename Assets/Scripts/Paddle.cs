@@ -7,7 +7,6 @@ public class Paddle : MonoBehaviour
 {
     public Rigidbody2D rb { get; private set; }
     public Vector2 direction { get; private set; }
-    AddPointEvent addPointEvent = new AddPointEvent();
 
     public float speed = 30f;
 
@@ -18,7 +17,6 @@ public class Paddle : MonoBehaviour
     }
     void Start()
     {
-        EventManager.AddEventInvoker(this);
     }
 
     void Update()
@@ -70,10 +68,7 @@ public class Paddle : MonoBehaviour
         }
     }
 
-    public void AddedEventListener(UnityAction<int> listener)
-    {
-        addPointEvent.AddListener(listener);
-    }
+    
 
 
 }
