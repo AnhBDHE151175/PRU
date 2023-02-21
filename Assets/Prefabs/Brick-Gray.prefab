@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5166244266727249605}
   m_Layer: 0
   m_Name: Brick-Gray
-  m_TagString: SingleBrick
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

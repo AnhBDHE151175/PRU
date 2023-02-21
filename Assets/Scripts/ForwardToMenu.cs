@@ -10,14 +10,13 @@ public class ForwardToMenu : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Ckcafafaf");
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(yourButton.gameObject.tag);
     }
 
 
