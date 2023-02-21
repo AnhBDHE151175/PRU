@@ -561,6 +561,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -626,6 +630,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1
@@ -1256,6 +1264,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1613,7 +1625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &974562042
 Transform:
   m_ObjectHideFlags: 0
@@ -1648,6 +1660,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1
@@ -1714,6 +1730,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1
@@ -2612,7 +2632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1647836388
 Transform:
   m_ObjectHideFlags: 0
@@ -2642,6 +2662,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1
@@ -2716,7 +2740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1721166518
 Transform:
   m_ObjectHideFlags: 0
@@ -3402,7 +3426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2054936117
 Transform:
   m_ObjectHideFlags: 0
@@ -3757,6 +3781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 206693525}
     m_Modifications:
+    - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
+      propertyPath: pointUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -3919065939231231231, guid: a1ecc70b65ac36e41b418d2a1b6292d1, type: 3}
       propertyPath: sprites.Array.size
       value: 1

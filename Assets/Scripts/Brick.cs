@@ -8,7 +8,8 @@ public class Brick : MonoBehaviour
 
     public Sprite[] sprites;
     public int health { get; private set; }
-    public int pointUnit = 100;
+    [SerializeField]
+    public int pointUnit = 10;
 
     public bool unBreak;
 
