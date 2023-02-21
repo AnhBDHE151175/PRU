@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
@@ -9,18 +10,26 @@ public class Brick2 : MonoBehaviour
     private SpriteRenderer sr;
     public int Hitpoints = 1;
     public int ScoreBrick = 10;
+    public bool unBreakable;
     public ParticleSystem DestroyEffect;
     public static event Action<Brick2> OnBrickDestruction;
 
     private void Start()
     {
         sr = this.GetComponent<SpriteRenderer>();
-        sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
+        if (!unBreakable)
+        {
+            sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Ball2 ball = collision.gameObject.GetComponent<Ball2>();
-        AddPointEvent();
+        if (unBreakable)
+        {
+            return;
+        }
         ApplyCollision(ball);
     }
 
@@ -37,6 +46,7 @@ public class Brick2 : MonoBehaviour
             OnBrickDestruction?.Invoke(this);
             OnSpawnItem();
             SpawnDestroyEffect();
+            AddPointEvent();
             Destroy(this.gameObject);
         }
         else
