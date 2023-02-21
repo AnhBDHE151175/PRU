@@ -24,8 +24,8 @@ public class PaddleManager : MonoBehaviour
     private Camera mainCamera;
     private float paddleInititalY;
     private float defaultPaddleWidthInPixels = 200;
-    public float defaultLeftClamp = 90;
-    public float defaultRightClamp = 1000;
+    public float defaultLeftClamp = 105;
+    public float defaultRightClamp = 720;
     private SpriteRenderer sr;
     private BoxCollider2D boxCol;
     public bool isExtend;

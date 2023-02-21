@@ -8,22 +8,31 @@ public class Brick2 : MonoBehaviour
 {
     private SpriteRenderer sr;
     public int Hitpoints = 1;
+    public int ScoreBrick = 10;
     public ParticleSystem DestroyEffect;
     public static event Action<Brick2> OnBrickDestruction;
 
     private void Start()
     {
         sr = this.GetComponent<SpriteRenderer>();
+        sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Ball2 ball = collision.gameObject.GetComponent<Ball2>();
+        AddPointEvent();
         ApplyCollision(ball);
     }
+
+    private void AddPointEvent()
+    {
+        Level3GameManager.Instance.Scores += ScoreBrick;
+    }
+
     private void ApplyCollision(Ball2 ball)
     {
         Hitpoints--;
-        if(Hitpoints <= 0)
+        if (Hitpoints <= 0)
         {
             OnBrickDestruction?.Invoke(this);
             OnSpawnItem();
@@ -32,7 +41,7 @@ public class Brick2 : MonoBehaviour
         }
         else
         {
-
+            sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
         }
     }
 
@@ -40,8 +49,8 @@ public class Brick2 : MonoBehaviour
     {
         float buffChance = UnityEngine.Random.Range(0, 100f);
         float deBuffChance = UnityEngine.Random.Range(0, 100f);
-        bool alreadySpawn = false; 
-        if(buffChance  <= CollectableManager.Instance.BuffChance)
+        bool alreadySpawn = false;
+        if (buffChance <= CollectableManager.Instance.BuffChance)
         {
             alreadySpawn = true;
             Collectable newBuff = SpawnCollectable(true);

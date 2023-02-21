@@ -26,6 +26,8 @@ public class Level3GameManager : MonoBehaviour
     #endregion
     public int TotalLives { get; set; } = 3;
     public int Lives { get; set; }
+    public int Scores { get; set; }
+
     public bool IsGameStarted { get; set; }
 
     public TextMeshProUGUI textLives;
@@ -36,16 +38,20 @@ public class Level3GameManager : MonoBehaviour
         Ball2.OnBallDestroy += OnBallDestroy;
         Brick2.OnBrickDestruction += OnBrickDestruction;
         textLives.text = $"Lives: {Lives}";
+        textScore.text = $"Scores: {Scores}";
+    }
+    private void Update()
+    {
+        textScore.text = $"Scores: {Scores}";
     }
     private void OnBallDestroy(Ball2 ball)
     {
-        if(BallManager.Instance.Balls.Count <= 0)
+        if (BallManager.Instance.Balls.Count <= 0)
         {
             this.Lives--;
             if (this.Lives < 1)
             {
                 //End game
-
                 SceneManager.LoadScene("GameOver");
             }
             else
@@ -53,6 +59,8 @@ public class Level3GameManager : MonoBehaviour
                 BallManager.Instance.InitBall();
                 IsGameStarted = false;
                 textLives.text = $"Lives: {Lives}";
+                textScore.text = $"Scores: {Scores}";
+
             }
         }
     }
@@ -60,7 +68,7 @@ public class Level3GameManager : MonoBehaviour
     private void OnBrickDestruction(Brick2 brick)
     {
         var remainBrick = GameObject.FindGameObjectsWithTag("SingleBrick");
-        
+
         Debug.Log(remainBrick.Count());
         if (remainBrick == null || remainBrick.Count() == 1)
         {

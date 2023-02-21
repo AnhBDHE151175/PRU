@@ -28,7 +28,7 @@ public class BallManager : MonoBehaviour
     private Ball2 initialBall;
     private Rigidbody2D initialBallRb;
 
-    public float initialBallSpeed = 250;
+    public float initialBallSpeed = 1000;
     public List<Ball2> Balls { get; set; }
 
     private void Start()
