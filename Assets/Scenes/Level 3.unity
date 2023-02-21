@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 3
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &100659072
 BoxCollider2D:
@@ -296,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 1
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &123905865
 BoxCollider2D:
@@ -504,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 4090417311186919919, guid: 55b19e0f72d7de24b90345950d2d6588, type: 3}
-  initialBallSpeed: 2000
+  initialBallSpeed: 1000
 --- !u!1 &220074714
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 1
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &323486600
 BoxCollider2D:
@@ -856,6 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 3
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &347625107
 BoxCollider2D:
@@ -982,6 +986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 1
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &464229864
 BoxCollider2D:
@@ -1194,6 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 3
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &515226289
 BoxCollider2D:
@@ -1637,6 +1643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 2
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &875629479
 BoxCollider2D:
@@ -1763,6 +1770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 2
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &959428688
 BoxCollider2D:
@@ -1874,6 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 1
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &982134486
 BoxCollider2D:
@@ -2000,6 +2009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 2
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &1014975213
 BoxCollider2D:
@@ -2324,6 +2334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 1
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &1303065272
 BoxCollider2D:
@@ -2450,6 +2461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 1
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &1339768673
 BoxCollider2D:
@@ -2561,6 +2573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 3
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &1401908243
 BoxCollider2D:
@@ -2771,6 +2784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 2
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &1688819366
 BoxCollider2D:
@@ -3083,6 +3097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 3
+  ScoreBrick: 10
   DestroyEffect: {fileID: 8093326503888065869, guid: 75a647e96a3f6194dbfecdfa568c2c27, type: 3}
 --- !u!61 &2067592401
 BoxCollider2D:

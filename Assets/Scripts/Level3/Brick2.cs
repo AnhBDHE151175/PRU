@@ -8,6 +8,7 @@ public class Brick2 : MonoBehaviour
 {
     private SpriteRenderer sr;
     public int Hitpoints = 1;
+    public int ScoreBrick = 10;
     public ParticleSystem DestroyEffect;
     public static event Action<Brick2> OnBrickDestruction;
 
@@ -19,8 +20,15 @@ public class Brick2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Ball2 ball = collision.gameObject.GetComponent<Ball2>();
+        AddPointEvent();
         ApplyCollision(ball);
     }
+
+    private void AddPointEvent()
+    {
+        Level3GameManager.Instance.Scores += ScoreBrick;
+    }
+
     private void ApplyCollision(Ball2 ball)
     {
         Hitpoints--;
