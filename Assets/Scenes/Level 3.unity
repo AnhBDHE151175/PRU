@@ -2924,10 +2924,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buffs:
-  - {fileID: 2222906688522063110, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
-  DeBuffs: []
+  - {fileID: 8727394157831868271, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+  - {fileID: 4529386257468869561, guid: e88c5a607f3aa7c4e9d278740061fae8, type: 3}
+  DeBuffs:
+  - {fileID: 6178881501873575320, guid: ccb3e70a173f03842afb7ef863f4feef, type: 3}
   BuffChance: 57
-  DeBuffChance: 0
+  DeBuffChance: 44
 --- !u!1 &1755297946
 GameObject:
   m_ObjectHideFlags: 0
