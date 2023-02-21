@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1261536161}
-  level: 2
+  level: 1
   score: 0
   lives: 3
 --- !u!1 &1261536159
