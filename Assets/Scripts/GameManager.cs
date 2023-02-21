@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,9 +11,10 @@ public class GameManager : MonoBehaviour
     public Paddle paddle { get; private set; }
     public Brick[] bricks { get; private set; }
 
+    public TextMeshProUGUI scoreText;
 
     const string ScorePrefix = "Score: ";
-    public int level = 2;
+    public int level = 1;
     public int score = 0;
     public int lives = 3;
 
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         StartGame();
         EventManager.AddEventListener(AddPoints);
+        scoreText.text = ScorePrefix + score.ToString();
     }
 
     void Update()
@@ -43,7 +46,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("ád");
         this.score = 0;
         this.lives = 3;
         SetLevel(level);
@@ -74,7 +76,8 @@ public class GameManager : MonoBehaviour
     public void AddPoints(int points)
     {
         score += points;
-        //scoreText.text = ScorePrefix + score;
+        scoreText.text = ScorePrefix + score.ToString();
+        Debug.Log(this.scoreText);
         if (IsClear())
         {
             SetLevel(level + 1);
