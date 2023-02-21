@@ -35,7 +35,7 @@ public class Brick2 : MonoBehaviour
 
     private void AddPointEvent()
     {
-        Level3GameManager.Instance.Scores += ScoreBrick;
+        Level3GameManager.Scores += ScoreBrick;
     }
 
     private void ApplyCollision(Ball2 ball)

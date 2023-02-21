@@ -26,7 +26,7 @@ public class Level3GameManager : MonoBehaviour
     #endregion
     public int TotalLives { get; set; } = 3;
     public int Lives { get; set; }
-    public int Scores { get; set; }
+    public static int Scores { get; set; }
 
 
     public static HashSet<int> Records { get; set; } = new HashSet<int>
@@ -62,6 +62,7 @@ public class Level3GameManager : MonoBehaviour
             if (this.Lives < 1)
             {
                 //End game
+                Records.Add(Scores);
                 SceneManager.LoadScene("GameOver");
             }
             else
