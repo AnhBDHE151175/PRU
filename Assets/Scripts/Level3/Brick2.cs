@@ -44,6 +44,7 @@ public class Brick2 : MonoBehaviour
         if (Hitpoints <= 0)
         {
             OnBrickDestruction?.Invoke(this);
+            BrickManager.Instance.breakBrick.Play();
             OnSpawnItem();
             SpawnDestroyEffect();
             AddPointEvent();
@@ -51,6 +52,8 @@ public class Brick2 : MonoBehaviour
         }
         else
         {
+            BrickManager.Instance.onReach.Play();
+
             sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
         }
     }
