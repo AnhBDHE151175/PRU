@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
 
     const string ScorePrefix = "Score: ";
-    public int level = 0;
+    public int level = 2;
     public int score = 0;
     public int lives = 3;
 
@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("ád");
         this.score = 0;
         this.lives = 3;
-
         SetLevel(level);
 
     }
