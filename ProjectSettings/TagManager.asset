@@ -8,6 +8,8 @@ TagManager:
   - SingleBrick
   - DeathCollider
   - Paddle
+  - Menu
+  - Level 3
   layers:
   - Default
   - TransparentFX
