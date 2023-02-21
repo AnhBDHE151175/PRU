@@ -14,10 +14,18 @@ public class Ball : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
+
     void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 1f);
+        ResetPosition();
         EventManager.AddEventInvoker(this);
+    }
+    public void ResetPosition()
+    {
+        this.transform.position = Vector2.zero;
+        this.rigidBody.velocity = Vector2.zero;
+        Invoke(nameof(SetRandomTrajectory), 1f);
+
     }
 
     private void SetRandomTrajectory()
@@ -45,5 +53,6 @@ public class Ball : MonoBehaviour
     {
         addPointEvent.AddListener(listener);
     }
+    
 
 }
