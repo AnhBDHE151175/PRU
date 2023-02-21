@@ -8,13 +8,13 @@ public class GameManager : MonoBehaviour
 {
 
     const string ScorePrefix = "Score: ";
-    public int level = 1;
+    public int level = 0;
     public int score = 0;
     public int lives = 3;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
     void Start()
     {
@@ -31,13 +31,30 @@ public class GameManager : MonoBehaviour
     {
         this.score = 0;
         this.lives = 3;
-        SetLevel(1);
+        //SetLevel(0);
     }
-    public void SetLevel(int level)
+    public void StartLevel1()
     {
-        this.level = level;
-        SceneManager.LoadScene("Level " + level);
+        this.score = 0;
+        this.lives = 3;
+        SceneManager.LoadScene(1);
     }
+    public void StartLevel2()
+    {
+        this.score = 0;
+        this.lives = 3;
+        SceneManager.LoadScene(2);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    //public void SetLevel(int level)
+    //{
+    //    this.level = level;
+    //    SceneManager.LoadScene("Level " + level);
+    //}
     public void AddPoints(int points)
     {
         Debug.Log("asd");

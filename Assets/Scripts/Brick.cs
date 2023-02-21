@@ -28,7 +28,7 @@ public class Brick : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     private void Hit()
