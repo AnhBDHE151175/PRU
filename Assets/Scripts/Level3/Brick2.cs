@@ -14,6 +14,7 @@ public class Brick2 : MonoBehaviour
     private void Start()
     {
         sr = this.GetComponent<SpriteRenderer>();
+        sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,7 +24,7 @@ public class Brick2 : MonoBehaviour
     private void ApplyCollision(Ball2 ball)
     {
         Hitpoints--;
-        if(Hitpoints <= 0)
+        if (Hitpoints <= 0)
         {
             OnBrickDestruction?.Invoke(this);
             OnSpawnItem();
@@ -32,7 +33,7 @@ public class Brick2 : MonoBehaviour
         }
         else
         {
-
+            sr.sprite = BrickManager.Instance.sprites[Hitpoints - 1];
         }
     }
 
@@ -40,8 +41,8 @@ public class Brick2 : MonoBehaviour
     {
         float buffChance = UnityEngine.Random.Range(0, 100f);
         float deBuffChance = UnityEngine.Random.Range(0, 100f);
-        bool alreadySpawn = false; 
-        if(buffChance  <= CollectableManager.Instance.BuffChance)
+        bool alreadySpawn = false;
+        if (buffChance <= CollectableManager.Instance.BuffChance)
         {
             alreadySpawn = true;
             Collectable newBuff = this.SpawnCollectable(true);

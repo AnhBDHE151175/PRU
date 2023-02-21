@@ -21,5 +21,6 @@ public class BrickManager : MonoBehaviour
     }
     #endregion
 
+    public Sprite[] sprites;
     public List<Brick> Bricks { get; private set; }
 }
