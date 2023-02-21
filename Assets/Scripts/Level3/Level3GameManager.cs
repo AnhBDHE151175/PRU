@@ -28,6 +28,11 @@ public class Level3GameManager : MonoBehaviour
     public int Lives { get; set; }
     public int Scores { get; set; }
 
+
+    public static HashSet<int> Records { get; set; } = new HashSet<int>
+        {
+            50, 100, 70
+        };
     public bool IsGameStarted { get; set; }
 
     public TextMeshProUGUI textLives;
@@ -43,6 +48,11 @@ public class Level3GameManager : MonoBehaviour
     private void Update()
     {
         textScore.text = $"Scores: {Scores}";
+        var remainBrick = GameObject.FindGameObjectsWithTag("SingleBrick");
+        if (remainBrick.Count() == 0)
+        {
+            SceneManager.LoadScene("Victory");
+        }
     }
     private void OnBallDestroy(Ball2 ball)
     {
@@ -67,11 +77,6 @@ public class Level3GameManager : MonoBehaviour
 
     private void OnBrickDestruction(Brick2 brick)
     {
-        var remainBrick = GameObject.FindGameObjectsWithTag("SingleBrick");
 
-        Debug.Log(remainBrick.Count());
-        if (remainBrick == null || remainBrick.Count() == 1)
-        {
-        }
     }
 }
