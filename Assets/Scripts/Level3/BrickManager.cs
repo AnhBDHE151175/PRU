@@ -22,5 +22,8 @@ public class BrickManager : MonoBehaviour
     #endregion
 
     public Sprite[] sprites;
+    public AudioSource breakBrick;
+    public AudioSource onReach;
+
     public List<Brick> Bricks { get; private set; }
 }
