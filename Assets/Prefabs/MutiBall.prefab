@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2222906688522063114}
   - component: {fileID: 2222906688522063108}
   - component: {fileID: 2222906688522063111}
-  - component: {fileID: 2222906688522063110}
+  - component: {fileID: 8727394157831868271}
   m_Layer: 0
   m_Name: MutiBall
   m_TagString: Untagged
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2222906688522063115}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2000003, y: -2.6000013, z: 0}
-  m_LocalScale: {x: 2.487765, y: 2.3463717, z: 1}
+  m_LocalScale: {x: 3.695165, y: 3.695165, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,7 +124,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2222906688522063110
+--- !u!114 &8727394157831868271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1445508571797544008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.695001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6951656
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.6179
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063109, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063114, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4d880cf25f938064ab10b5f802f0ec70, type: 3}
+    - target: {fileID: 2222906688522063114, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9661837
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063114, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063114, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.55345905
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222906688522063115, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+      propertyPath: m_Name
+      value: ShrinkPaddle Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8727394157831868271, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+--- !u!1 &780850859649323331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2222906688522063115, guid: c559f637f409bbb459e90b02aede3f0c, type: 3}
+  m_PrefabInstance: {fileID: 1445508571797544008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6178881501873575320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780850859649323331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b627446bfcfdcbe45a1d9c925b7746ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddWidth: -10

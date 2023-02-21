@@ -44,18 +44,18 @@ public class Brick2 : MonoBehaviour
         if(buffChance  <= CollectableManager.Instance.BuffChance)
         {
             alreadySpawn = true;
-            Collectable newBuff = this.SpawnCollectable(true);
+            Collectable newBuff = SpawnCollectable(true);
         }
 
         if (deBuffChance <= CollectableManager.Instance.DeBuffChance && !alreadySpawn)
         {
-            Collectable newBuff = this.SpawnCollectable(true);
+            Collectable newBuff = SpawnCollectable(false);
         }
     }
 
     private Collectable SpawnCollectable(bool isBuff)
     {
-        List<Collectable> collectables = new List<Collectable>();
+        List<Collectable> collectables;
         if (isBuff)
         {
             collectables = CollectableManager.Instance.Buffs;

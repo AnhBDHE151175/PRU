@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,12 +27,17 @@ public class PaddleManager : MonoBehaviour
     public float defaultLeftClamp = 90;
     public float defaultRightClamp = 1000;
     private SpriteRenderer sr;
+    private BoxCollider2D boxCol;
+    public bool isExtend;
+
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
         paddleInititalY = transform.position.y;
         sr = GetComponent<SpriteRenderer>();
+        boxCol = GetComponent<BoxCollider2D>();
+        isExtend = false;   
     }
 
     // Update is called once per frame
@@ -71,6 +77,19 @@ public class PaddleManager : MonoBehaviour
                 ballRb.AddForce(new Vector2((Mathf.Abs(difference * 200)), BallManager.Instance.initialBallSpeed));
             }
         }
+    }
+
+    public void StartAnimation(float addWidth)
+    {
+        /*StartCoroutine(AnimatePaddleWidth(newWidth));*/
+        if((addWidth < 0 && isExtend) || (addWidth > 0 && !isExtend))
+        {
+            var currentScale = gameObject.transform.localScale;
+            gameObject.transform.localScale = Vector3.Lerp(currentScale, currentScale + new Vector3(addWidth, 0, 0), Time.deltaTime * 3);
+            boxCol.size = Vector2.Lerp(boxCol.size, boxCol.size + new Vector2(addWidth, 0), Time.deltaTime * 3);
+            isExtend = !isExtend;
+        }
+
     }
 }
 
