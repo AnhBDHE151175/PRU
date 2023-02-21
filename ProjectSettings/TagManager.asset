@@ -10,6 +10,8 @@ TagManager:
   - Paddle
   - Menu
   - Level 3
+  - Statistic
+  - Menu2
   layers:
   - Default
   - TransparentFX

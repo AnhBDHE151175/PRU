@@ -2654,7 +2654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &711110737
 Transform:
   m_ObjectHideFlags: 0
@@ -4105,7 +4105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166244266727249603, guid: 9e2d0556e29ed714c925468b7af9abd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.27
+      value: -15.01
       objectReference: {fileID: 0}
     - target: {fileID: 5166244266727249603, guid: 9e2d0556e29ed714c925468b7af9abd6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4167,7 +4167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166244266727249603, guid: 9e2d0556e29ed714c925468b7af9abd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.41
+      value: -11.34
       objectReference: {fileID: 0}
     - target: {fileID: 5166244266727249603, guid: 9e2d0556e29ed714c925468b7af9abd6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6005,7 +6005,7 @@ MonoBehaviour:
   - {fileID: 4529386257468869561, guid: e88c5a607f3aa7c4e9d278740061fae8, type: 3}
   DeBuffs:
   - {fileID: 6178881501873575320, guid: ccb3e70a173f03842afb7ef863f4feef, type: 3}
-  BuffChance: 13.3
+  BuffChance: 71.5
   DeBuffChance: 36.3
 --- !u!1 &1720642671
 GameObject:

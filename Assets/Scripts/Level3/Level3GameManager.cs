@@ -42,6 +42,7 @@ public class Level3GameManager : MonoBehaviour
         Lives = TotalLives;
         Ball2.OnBallDestroy += OnBallDestroy;
         Brick2.OnBrickDestruction += OnBrickDestruction;
+        Scores = 0;
         textLives.text = $"Lives: {Lives}";
         textScore.text = $"Scores: {Scores}";
     }
@@ -51,6 +52,7 @@ public class Level3GameManager : MonoBehaviour
         var remainBrick = GameObject.FindGameObjectsWithTag("SingleBrick");
         if (remainBrick.Count() == 0)
         {
+            Records.Add(Scores);
             SceneManager.LoadScene("Victory");
         }
     }
