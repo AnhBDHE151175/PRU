@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += LoadScene;
 
     }
